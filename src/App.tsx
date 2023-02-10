@@ -55,6 +55,13 @@ function App() {
           filtro!.toISOString().slice(0, 10) === evento.inicio.toISOString().slice(0, 10)
       );
 
+  /* 
+  Corrigindo o erro acima, que é o seguinte:
+    Forbidden non-null assertion.eslint@typescript-eslint/no-non-null-assertion
+
+  filtro?.toISOString().slice(0, 10) === evento.inicio.toISOString().slice(0, 10) ?? false
+  */
+
   return (
     <div className={style.App}>
       <div className={style.Coluna}>
