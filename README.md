@@ -13,7 +13,7 @@
 
 &nbsp;
 
-![TaskManager](https://github.com/LivioAlvarenga/alfood/blob/master/files/Home-Alfood.png?raw=true#vitrinedev)raw=true)
+![TaskManager](https://github.com/LivioAlvarenga/task-manager/blob/master/files/Home-task-manager.png?raw=true#vitrinedev)
 
 &nbsp;
 <a id="-sobre-o-projeto"></a>
@@ -25,11 +25,11 @@
 &nbsp;
 
 <p align="center">
-  <a href="#license"><img src="https://img.shields.io/github/license/LivioAlvarenga/aluroni?color=ff0000"></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni/issues"><img src="https://img.shields.io/github/issues/LivioAlvarenga/aluroni" alt="issue site aluroni" /></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/languages/count/LivioAlvarenga/aluroni" alt="total amount of programming languages used in the project" /></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/languages/top/LivioAlvarenga/aluroni" alt="most used language in the projects" /></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/repo-size/LivioAlvarenga/aluroni" alt="repository size" /></a>
+  <a href="#license"><img src="https://img.shields.io/github/license/LivioAlvarenga/task-manager?color=ff0000"></a>
+  <a href="https://github.com/LivioAlvarenga/task-manager/issues"><img src="https://img.shields.io/github/issues/LivioAlvarenga/task-manager" alt="issue site task-manager" /></a>
+  <a href="https://github.com/LivioAlvarenga/task-manager"><img src="https://img.shields.io/github/languages/count/LivioAlvarenga/task-manager" alt="total amount of programming languages used in the project" /></a>
+  <a href="https://github.com/LivioAlvarenga/task-manager"><img src="https://img.shields.io/github/languages/top/LivioAlvarenga/task-manager" alt="most used language in the projects" /></a>
+  <a href="https://github.com/LivioAlvarenga/task-manager"><img src="https://img.shields.io/github/repo-size/LivioAlvarenga/task-manager" alt="repository size" /></a>
 <p>
 
 &nbsp;
@@ -41,10 +41,10 @@
 
 ## 📺 Vitrine Dev
 
-| :placard: Vitrine.Dev |                                                                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| :sparkles: Nome       | **Em construção...** |
-| :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, JavaScript, MUI UI, HTML5, CSS3, Prettier, Eslint                              |
+| :placard: Vitrine.Dev |                                                                                                   |
+| --------------------- | ------------------------------------------------------------------------------------------------- |
+| :sparkles: Nome       | **Em construção...**                                                                              |
+| :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, JavaScript, MUI UI, HTML5, CSS3, Prettier, Eslint |
 
 ---
 
@@ -105,12 +105,6 @@ export default defineConfig({
 # Em tsconfig.json adicione a baseURL em compilerOptions
 "baseUrl": "./src"
 
-# Instalando react-router-dom
-npm install react-router-dom
-
-#Instalando biblioteca de Axios para comunicação Http
-npm install axios
-
 ```
 
 ### Configurando ESlint
@@ -150,19 +144,6 @@ npx eslint ./src --fix
 # Instalar sass para compilar css
 npm install -D sass
 
-# Instalar componentes MUI
-npm install @mui/material @emotion/react @emotion/styled
-npm install @mui/icons-material
-
-
-```
-
-### Instalando api em server
-
-```bash
-# Fazer um build em container docker
-cd server
-docker-compose build
 ```
 
 &nbsp;
@@ -174,31 +155,7 @@ docker-compose build
 
 ## ⚙️ Funcionalidades
 
-- Lista de restaurantes com pratos
-- Filtro por restaurante
-- Ordenação de restaurantes
-- Comunicação com API REST
-
-&nbsp;
-
-![Alfood-api-rest](https://github.com/LivioAlvarenga/alfood/blob/master/files/API-Rest.png?raw=true)
-
-&nbsp;
-
-- Area administrativa com CRUD de restaurantes, sem necessidade de dev atualizar dados do site.
-
-&nbsp;
-
-![Alfood-admin-restaurante](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Restaurante.png?raw=true)
-![Alfood-admin-novo-restaurante](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Novo-Restaurante.png?raw=true)
-
-&nbsp;
-
-- Area administrativa com CRUD de pratos, sem necessidade de dev atualizar dados do site.
-
-&nbsp;
-![Alfood-admin-pratos](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Pratos.png?raw=true)
-![Alfood-admin-novo-prato](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Novo-Prato.png?raw=true)
+- Em construção...
 
 &nbsp;
 
@@ -206,9 +163,9 @@ docker-compose build
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/livioalvarenga/alfood.git
+$ git clone https://github.com/livioalvarenga/task-manager.git
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd alfood
+$ cd task-manager
 # Instale as dependências
 $ npm install
 # Execute a aplicação em modo de desenvolvimento
