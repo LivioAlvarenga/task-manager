@@ -145,6 +145,9 @@ npm install -D sass
 # Kalend - componente de calendário para React
 npm install kalend
 
+# Instalando gerenciador de estados Recoil
+npm install recoil
+
 ```
 
 &nbsp;
