@@ -1,5 +1,5 @@
+import { IEvento } from "interfaces/IEvento";
 import React from "react";
-import { IEvento } from "../../../interfaces/IEvento";
 
 const EventoCheckbox: React.FC<{
   evento: IEvento;

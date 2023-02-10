@@ -1,8 +1,8 @@
+import { IEvento } from "interfaces/IEvento";
 import React, { useState } from "react";
-import { IEvento } from "../../interfaces/IEvento";
-import style from "./Formulario.module.scss";
+import style from "./Form.module.scss";
 
-const Formulario: React.FC<{ aoSalvar: (evento: IEvento) => void }> = ({ aoSalvar }) => {
+const Form: React.FC<{ aoSalvar: (evento: IEvento) => void }> = ({ aoSalvar }) => {
   const [descricao, setDescricao] = useState("");
   const [dataInicio, setDataInicio] = useState("");
   const [horaInicio, setHoraInicio] = useState("");
@@ -90,4 +90,4 @@ const Formulario: React.FC<{ aoSalvar: (evento: IEvento) => void }> = ({ aoSalva
   );
 };
 
-export default Formulario;
+export default Form;

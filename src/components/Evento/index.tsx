@@ -1,5 +1,5 @@
 import React from "react";
-import { IEvento } from "../../interfaces/IEvento";
+import { IEvento } from "interfaces/IEvento";
 import style from "./Evento.module.scss";
 import EventoCheckbox from "./EventoCheckbox";
 

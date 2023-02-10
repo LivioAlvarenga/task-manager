@@ -1,7 +1,7 @@
+import Evento from "components/Evento";
+import Filtro from "components/Filtro";
+import { IEvento } from "interfaces/IEvento";
 import React from "react";
-import { IEvento } from "../../interfaces/IEvento";
-import Evento from "../Evento";
-import Filtro from "../Filtro";
 import style from "./ListaDeEventos.module.scss";
 
 const ListaDeEventos: React.FC<{

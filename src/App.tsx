@@ -2,7 +2,7 @@ import { useState } from "react";
 import style from "./App.module.scss";
 import Calendario from "./components/Calendario";
 import Card from "./components/Card";
-import Formulario from "./components/Formulario";
+import Form from "./components/Form";
 import ListaDeEventos from "./components/ListaDeEventos";
 import { IEvento } from "./interfaces/IEvento";
 
@@ -10,15 +10,15 @@ function App() {
   const [eventos, setEventos] = useState<IEvento[]>([
     {
       descricao: "Estudar React",
-      inicio: new Date("2022-01-15T09:00"),
-      fim: new Date("2022-01-15T13:00"),
+      inicio: new Date("2023-02-12T09:00"),
+      fim: new Date("2023-02-12T13:00"),
       completo: false,
       id: 1642342747,
     },
     {
       descricao: "Estudar Recoil",
-      inicio: new Date("2022-01-16T09:00"),
-      fim: new Date("2022-01-16T11:00"),
+      inicio: new Date("2023-02-11T09:00"),
+      fim: new Date("2023-02-11T11:00"),
       completo: false,
       id: 1642342959,
     },
@@ -66,7 +66,7 @@ function App() {
     <div className={style.App}>
       <div className={style.Coluna}>
         <Card>
-          <Formulario aoSalvar={adicionarEvento} />
+          <Form aoSalvar={adicionarEvento} />
         </Card>
         <hr />
         <Card>
