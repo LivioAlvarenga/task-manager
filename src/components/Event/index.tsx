@@ -5,9 +5,7 @@ import { stateEventList } from "state/atom";
 import style from "./Event.module.scss";
 import EventCheckbox from "./EventCheckbox";
 
-const Event: React.FC<{
-  event: IEvent;
-}> = ({ event: event }) => {
+const Event: React.FC<{ event: IEvent }> = ({ event: event }) => {
   const setStateEventList = useSetRecoilState<IEvent[]>(stateEventList);
 
   const deleteEvent = () => {
@@ -17,7 +15,6 @@ const Event: React.FC<{
   };
 
   const styles = [style.Event];
-
   if (event.complete) {
     styles.push(style.complete);
   }

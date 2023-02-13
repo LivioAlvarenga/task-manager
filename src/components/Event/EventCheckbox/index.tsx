@@ -1,24 +1,17 @@
 import { IEvent } from "interfaces/IEvent";
 import React from "react";
-import { useSetRecoilState } from "recoil";
-import { stateEventList } from "state/atom";
+import useUpdateEvent from "state/hooks/useUpdateEvent";
 
-const EventCheckbox: React.FC<{
-  event: IEvent;
-}> = ({ event: event }) => {
+const EventCheckbox: React.FC<{ event: IEvent }> = ({ event: event }) => {
   const styles = ["far", "fa-2x", event.complete ? "fa-check-square" : "fa-square"];
 
-  const setStateEventList = useSetRecoilState<IEvent[]>(stateEventList);
+  const updateEvent = useUpdateEvent();
 
   const changeState = () => {
     const changeEvent = { ...event };
     changeEvent.complete = !changeEvent.complete;
 
-    setStateEventList((oldStateEventList) =>
-      oldStateEventList.map((thisEvent) =>
-        thisEvent.id === changeEvent.id ? changeEvent : thisEvent
-      )
-    );
+    updateEvent(changeEvent);
   };
 
   return <i className={styles.join(" ")} onClick={changeState}></i>;
