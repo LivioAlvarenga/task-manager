@@ -1,25 +1,27 @@
 import Evento from "components/Evento";
 import Filtro from "components/Filtro";
-import { IEvent } from "interfaces/IEvent";
 import React from "react";
-import style from "./ListaDeEventos.module.scss";
+import { useRecoilValue } from "recoil";
+import { stateEventList } from "state/atom";
+import style from "./EventList.module.scss";
 
-const ListaDeEventos: React.FC<{
-  eventos: IEvent[];
+const EventList: React.FC<{
   aoAlterarStatus: (id: number) => void;
   aoDeletarEvento: (id: number) => void;
   aoFiltroAplicado: (data: Date | null) => void;
-}> = ({ eventos, aoDeletarEvento, aoAlterarStatus, aoFiltroAplicado }) => {
+}> = ({ aoDeletarEvento, aoAlterarStatus, aoFiltroAplicado }) => {
+  const events = useRecoilValue(stateEventList);
+
   return (
     <section>
       <Filtro aoFiltroAplicado={aoFiltroAplicado} />
       <div className={style.Scroll}>
-        {eventos.map((evento) => (
+        {events.map((event) => (
           <Evento
             aoAlterarStatus={aoAlterarStatus}
             aoDeletarEvento={aoDeletarEvento}
-            evento={evento}
-            key={evento.id}
+            evento={event}
+            key={event.id}
           />
         ))}
       </div>
@@ -27,4 +29,4 @@ const ListaDeEventos: React.FC<{
   );
 };
 
-export default ListaDeEventos;
+export default EventList;
