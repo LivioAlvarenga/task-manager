@@ -16,18 +16,6 @@ function App() {
     setEventos([...eventos]); */
   };
 
-  const alterarStatusEvento = (id: number) => {
-    /* const evento = eventos.find((evento) => evento.id === id);
-    if (evento) {
-      evento.complete = !evento.complete;
-    }
-    setEventos([...eventos]); */
-  };
-
-  const deletarEvento = (id: number) => {
-    /* setEventos([...eventos.filter((evento) => evento.id !== id)]); */
-  };
-
   const aplicarFiltro = (data: Date | null) => {
     setFiltro(data);
   };
@@ -55,11 +43,7 @@ function App() {
           </Card>
           <hr />
           <Card>
-            <EventList
-              aoFiltroAplicado={aplicarFiltro}
-              aoAlterarStatus={alterarStatusEvento}
-              aoDeletarEvento={deletarEvento}
-            />
+            <EventList aoFiltroAplicado={aplicarFiltro} />
           </Card>
         </div>
         <div className={style.Coluna}>
