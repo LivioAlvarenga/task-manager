@@ -8,7 +8,6 @@ import Form from "./components/Form";
 import { IEvent } from "./interfaces/IEvent";
 
 function App() {
-
   const [filtro, setFiltro] = useState<Date | null>();
 
   const adicionarEvento = (evento: IEvent) => {
@@ -52,7 +51,7 @@ function App() {
       <div className={style.App}>
         <div className={style.Coluna}>
           <Card>
-            <Form aoSalvar={adicionarEvento} />
+            <Form />
           </Card>
           <hr />
           <Card>
