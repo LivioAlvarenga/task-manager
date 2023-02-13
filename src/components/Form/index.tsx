@@ -1,8 +1,8 @@
-import { IEvento } from "interfaces/IEvento";
+import { IEvent } from "interfaces/IEvent";
 import React, { useState } from "react";
 import style from "./Form.module.scss";
 
-const Form: React.FC<{ aoSalvar: (evento: IEvento) => void }> = ({ aoSalvar }) => {
+const Form: React.FC<{ aoSalvar: (evento: IEvent) => void }> = ({ aoSalvar }) => {
   const [descricao, setDescricao] = useState("");
   const [dataInicio, setDataInicio] = useState("");
   const [horaInicio, setHoraInicio] = useState("");
@@ -17,10 +17,10 @@ const Form: React.FC<{ aoSalvar: (evento: IEvento) => void }> = ({ aoSalvar }) =
   const submeterForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     aoSalvar({
-      descricao,
-      inicio: montarData(dataInicio, horaInicio),
-      fim: montarData(dataFim, horaFim),
-      completo: false,
+      description: descricao,
+      start: montarData(dataInicio, horaInicio),
+      end: montarData(dataFim, horaFim),
+      complete: false,
     });
     setDescricao("");
     setDataInicio("");

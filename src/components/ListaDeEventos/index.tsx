@@ -1,11 +1,11 @@
 import Evento from "components/Evento";
 import Filtro from "components/Filtro";
-import { IEvento } from "interfaces/IEvento";
+import { IEvent } from "interfaces/IEvent";
 import React from "react";
 import style from "./ListaDeEventos.module.scss";
 
 const ListaDeEventos: React.FC<{
-  eventos: IEvento[];
+  eventos: IEvent[];
   aoAlterarStatus: (id: number) => void;
   aoDeletarEvento: (id: number) => void;
   aoFiltroAplicado: (data: Date | null) => void;

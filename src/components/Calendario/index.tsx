@@ -1,4 +1,4 @@
-import { IEvento } from "interfaces/IEvento";
+import { IEvent } from "interfaces/IEvent";
 import Kalend, { CalendarView } from "kalend";
 import "kalend/dist/styles/index.css";
 import React from "react";
@@ -13,19 +13,19 @@ interface IKalendEvento {
   color: string;
 }
 
-const Calendario: React.FC<{ eventos: IEvento[] }> = ({ eventos }) => {
+const Calendario: React.FC<{ eventos: IEvent[] }> = ({ eventos }) => {
   const eventosKalend = new Map<string, IKalendEvento[]>();
 
   eventos.forEach((evento) => {
-    const chave = evento.inicio.toISOString().slice(0, 10);
+    const chave = evento.start.toISOString().slice(0, 10);
     if (!eventosKalend.has(chave)) {
       eventosKalend.set(chave, []);
     }
     eventosKalend.get(chave)?.push({
       id: evento.id,
-      startAt: evento.inicio.toISOString(),
-      endAt: evento.fim.toISOString(),
-      summary: evento.descricao,
+      startAt: evento.start.toISOString(),
+      endAt: evento.end.toISOString(),
+      summary: evento.description,
       color: "blue",
     });
   });
