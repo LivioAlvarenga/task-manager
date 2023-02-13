@@ -2,14 +2,13 @@ import { IKalendEvent } from "interfaces/IKalendEvent";
 import Kalend, { CalendarEvent, CalendarView, OnEventDragFinish } from "kalend";
 import "kalend/dist/styles/index.css";
 import React from "react";
-import { useRecoilValue } from "recoil";
-import { stateEventList } from "state/atom";
+import useEventList from "state/hooks/useEventList";
 import useUpdateEvent from "state/hooks/useUpdateEvent";
 import ptBR from "../Calendar/localization/ptBR.json";
 import style from "./Calendar.module.scss";
 
 const Calendar: React.FC = () => {
-  const events = useRecoilValue(stateEventList);
+  const events = useEventList();
   const eventosKalend = new Map<string, IKalendEvent[]>();
   const updateEvent = useUpdateEvent();
 
