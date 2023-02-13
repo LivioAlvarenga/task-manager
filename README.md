@@ -63,7 +63,6 @@ As seguintes ferramentas foram usadas na construção do projeto
   <a href= "https://sass-lang.com/"><img alt="SASS badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=CC6699&logo=Sass&label=used&message=SASS&color=CC6699"></a>
   <a href= "https://www.typescriptlang.org/"><img alt="TypeScript badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=3178c6&logo=TypeScript&label=Language&message=TypeScript&color=3178c6"></a>
   <a href= "https://www.javascript.com/"><img alt="JavaScript badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=F7DF1E&logo=JavaScript&label=Language&message=JavaScript&color=F7DF1E"></a>
-  <a href= "https://nodejs.org/en/"><img alt="Node.js badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=339933&logo=Node.js&label=Runtime Environment&message=Node.js&color=3139933"></a>
   <a href= "https://reactjs.org/"><img alt="React badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=61dafb&logo=React&label=Framework&message=React&color=61dafb"></a>
   <a href= "https://recoiljs.org/"><img alt="Recoil badge" src="https://github.com/LivioAlvarenga/task-manager/blob/master/files/recoil-badge.svg?raw=true"></a>
   <a href= "https://vitejs.dev/"><img alt="site Vite" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=646cff&logo=Vite&label=Tooling&message=Vite&color=646cff"></a>
@@ -175,13 +174,6 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 # A aplicação será aberta na porta:5173 - acesse http://localhost:5173
-```
-
-### 🧭 Rodando a aplicação server (Modo desenvolvimento)
-
-```bash
-$ docker-compose up
-# A aplicação será aberta na porta:8000 - acesse http://0.0.0.0:8000/
 ```
 
 &nbsp;
