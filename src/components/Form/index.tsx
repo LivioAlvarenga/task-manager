@@ -1,11 +1,9 @@
-import { IEvent } from "interfaces/IEvent";
 import React, { useState } from "react";
-import { useSetRecoilState } from "recoil";
-import { stateEventList } from "state/atom";
+import useAddEvent from "state/hooks/useAddEvent";
 import style from "./Form.module.scss";
 
 const Form: React.FC = () => {
-  const setStateEventList = useSetRecoilState<IEvent[]>(stateEventList);
+  const addEvent = useAddEvent();
 
   const [description, setDescription] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -21,20 +19,24 @@ const Form: React.FC = () => {
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const eventData = {
-      id: Math.random(),
-      description: description,
-      start: assembleDate(startDate, startClock),
-      end: assembleDate(endDate, endClock),
-      complete: false,
-    };
+    try {
+      const eventData = {
+        description: description,
+        start: assembleDate(startDate, startClock),
+        end: assembleDate(endDate, endClock),
+        complete: false,
+      };
 
-    setStateEventList((oldStateEventList) => [...oldStateEventList, eventData]);
-    setDescription("");
-    setStartDate("");
-    setStartClock("");
-    setEndDate("");
-    setEndClock("");
+      addEvent(eventData);
+
+      setDescription("");
+      setStartDate("");
+      setStartClock("");
+      setEndDate("");
+      setEndClock("");
+    } catch (error) {
+      alert(error);
+    }
   };
   return (
     <form className={style.Form} onSubmit={submitForm}>
