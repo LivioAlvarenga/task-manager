@@ -1,18 +1,11 @@
 import { IEvent } from "interfaces/IEvent";
 import React from "react";
-import { useSetRecoilState } from "recoil";
-import { stateEventList } from "state/atom";
+import useDeleteEvent from "state/hooks/useDeleteEvent";
 import style from "./Event.module.scss";
 import EventCheckbox from "./EventCheckbox";
 
 const Event: React.FC<{ event: IEvent }> = ({ event: event }) => {
-  const setStateEventList = useSetRecoilState<IEvent[]>(stateEventList);
-
-  const deleteEvent = () => {
-    setStateEventList((oldStateEventList) =>
-      oldStateEventList.filter((thisEvent) => thisEvent.id !== event.id)
-    );
-  };
+  const deleteEvent = useDeleteEvent();
 
   const styles = [style.Event];
   if (event.complete) {
@@ -27,7 +20,7 @@ const Event: React.FC<{ event: IEvent }> = ({ event: event }) => {
           {event.description} - {event.start.toLocaleDateString()}
         </h3>
       </div>
-      <i className="far fa-times-circle fa-2x" onClick={deleteEvent}></i>
+      <i className="far fa-times-circle fa-2x" onClick={() => deleteEvent(event)}></i>
     </div>
   );
 };
