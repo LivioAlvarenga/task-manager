@@ -19,6 +19,7 @@ const Filter: React.FC = () => {
     }
 
     setStateEventList(filter);
+    setDate("");
   };
 
   return (
