@@ -1,3 +1,4 @@
+import { IEvent } from "interfaces/IEvent";
 import { selector } from "recoil";
 import { stateEventFilter, stateEventList } from "state/atom";
 
@@ -18,5 +19,19 @@ export const filteredEventStates = selector({
       }
     });
     return events;
+  },
+});
+
+export const eventsAsync = selector({
+  key: "eventsAsync",
+  get: async () => {
+    const responseHttp = await fetch("http://localhost:8000/events");
+    const eventsJson: IEvent[] = await responseHttp.json();
+
+    return eventsJson.map((event) => ({
+      ...event,
+      start: new Date(event.start),
+      end: new Date(event.end),
+    }));
   },
 });

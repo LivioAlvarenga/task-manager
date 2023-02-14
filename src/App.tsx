@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { RecoilRoot } from "recoil";
 import style from "./App.module.scss";
 import Calendar from "./components/Calendar";
@@ -8,20 +9,22 @@ import Form from "./components/Form";
 function App() {
   return (
     <RecoilRoot>
-      <div className={style.App}>
-        <div className={style.Coluna}>
-          <Card>
-            <Form />
-          </Card>
-          <hr />
-          <Card>
-            <EventList />
-          </Card>
+      <Suspense fallback="Esta carregando...">
+        <div className={style.App}>
+          <div className={style.Coluna}>
+            <Card>
+              <Form />
+            </Card>
+            <hr />
+            <Card>
+              <EventList />
+            </Card>
+          </div>
+          <div className={style.Coluna}>
+            <Calendar />
+          </div>
         </div>
-        <div className={style.Coluna}>
-          <Calendar />
-        </div>
-      </div>
+      </Suspense>
     </RecoilRoot>
   );
 }
