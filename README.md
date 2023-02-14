@@ -151,6 +151,30 @@ npm install recoil
 
 &nbsp;
 
+### Instalando JSON Server (fake REST API)
+
+```bash
+# Fazer instalação global do json-server
+npm install -g json-server
+
+mkdir server
+# criar um arquivo db.json e adicionar a estrutura json que precisa
+
+{
+  "events": [
+    {
+      "description": "Estudar React",
+      "start": "2023-02-18T09:00",
+      "end": "2023-02-18T13:00",
+      "complete": false,
+      "id": 100
+    }
+  ]
+}
+```
+
+&nbsp;
+
 ---
 
 &nbsp;
@@ -174,6 +198,15 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 # A aplicação será aberta na porta:5173 - acesse http://localhost:5173
+```
+
+### 🧭 Rodando a aplicação server (Modo desenvolvimento)
+
+```bash
+$ cd server
+$ json-server --watch db.json -p 8000
+# A aplicação será aberta na porta:8000 - acesse http://0.0.0.0:8000/ para home
+# E http://localhost:8000/events para json
 ```
 
 &nbsp;
