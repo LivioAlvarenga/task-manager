@@ -1,4 +1,3 @@
-import { IEvent } from "interfaces/IEvent";
 import { selector } from "recoil";
 import { stateEventFilter, stateEventList } from "state/atom";
 
@@ -22,7 +21,7 @@ export const filteredEventStates = selector({
   },
 });
 
-export const eventsAsync = selector({
+/* export const eventsAsync = selector({
   key: "eventsAsync",
   get: async () => {
     const responseHttp = await fetch("http://localhost:8000/events");
@@ -34,4 +33,4 @@ export const eventsAsync = selector({
       end: new Date(event.end),
     }));
   },
-});
+}); */
